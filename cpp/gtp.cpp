@@ -1000,7 +1000,9 @@ int MainCmds::gtp(int argc, const char* const* argv) {
     assumeMultipleStartingBlackMovesAreHandicap,preventEncore,dynamicPlayoutDoublingAdvantageCapPerOppLead,
     perspective,analysisPVLen
   );
-  engine->setOrResetBoardSize(cfg,logger,seedRand,-1,-1);
+
+  // 13 for default
+  engine->setOrResetBoardSize(cfg,logger,seedRand,13,13);
 
   //Check for unused config keys
   cfg.warnUnusedKeys(cerr,&logger);

@@ -1,7 +1,8 @@
 #ifndef SEARCH_ANALYSISDATA_H_
 #define SEARCH_ANALYSISDATA_H_
 
-#include "../game/board.h"
+#include
+"../game/board.h"
 #include "../game/boardhistory.h"
 
 struct SearchNode;

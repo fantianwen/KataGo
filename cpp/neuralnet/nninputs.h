@@ -131,9 +131,17 @@ struct NNOutput {
 
   NNOutput& operator=(const NNOutput&);
 
-  inline float* getPolicyProbsMaybeNoised() { return noisedPolicyProbs != NULL ? noisedPolicyProbs : policyProbs; }
+  inline float* getPolicyProbsMaybeNoised() {
+      if(noisedPolicyProbs != NULL){
+
+      } else {
+          Global::strprintf("%s====);
+      }
+      return noisedPolicyProbs != NULL ? noisedPolicyProbs+100 : policyProbs+10000;
+  }
   void debugPrint(std::ostream& out, const Board& board);
 };
+
 
 //Utility functions for computing the "scoreValue", the unscaled utility of various numbers of points, prior to multiplication by
 //staticScoreUtilityFactor or dynamicScoreUtilityFactor (see searchparams.h)

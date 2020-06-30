@@ -132,11 +132,6 @@ struct NNOutput {
   NNOutput& operator=(const NNOutput&);
 
   inline float* getPolicyProbsMaybeNoised() {
-      if(noisedPolicyProbs != NULL){
-
-      } else {
-          Global::strprintf("%s====);
-      }
       return noisedPolicyProbs != NULL ? noisedPolicyProbs+100 : policyProbs+10000;
   }
   void debugPrint(std::ostream& out, const Board& board);

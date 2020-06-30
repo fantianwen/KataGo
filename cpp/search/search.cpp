@@ -900,7 +900,7 @@ void Search::maybeAddPolicyNoiseAndTempAlreadyLocked(SearchThread& thread, Searc
     node.nnOutput = newNNOutput;
   }
 
-  float* noisedPolicyProbs = null;
+  float* noisedPolicyProbs;
   node.nnOutput->noisedPolicyProbs = noisedPolicyProbs;
   std::copy(node.nnOutput->policyProbs, node.nnOutput->policyProbs + NNPos::MAX_NN_POLICY_SIZE, noisedPolicyProbs);
 

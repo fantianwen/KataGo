@@ -132,7 +132,7 @@ struct NNOutput {
   NNOutput& operator=(const NNOutput&);
 
   inline float* getPolicyProbsMaybeNoised() {
-      return noisedPolicyProbs != NULL ? noisedPolicyProbs+100 : policyProbs;
+      return noisedPolicyProbs != NULL ? noisedPolicyProbs: policyProbs+100;
   }
   void debugPrint(std::ostream& out, const Board& board);
 };
